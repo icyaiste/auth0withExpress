@@ -6,8 +6,8 @@ import cors from "cors";
 
 const { requiresAuth } = pkg;
 const app = express();
-app.use(authMiddleware);
 
+app.use(authMiddleware);
 app.use(express.json());
 app.use(
   cors({
@@ -28,13 +28,16 @@ app.get("/profile", requiresAuth(), (req, res) => {
   }
 });
 
-// Protected route
-// app.get("/secure-data", verifyToken, (req, res) => {
-//   res.json({
-//     message: "This is protected data",
-//     user: req.user, // Decoded token info
-//   });
-// });
+//Protected route
+app.get("/secure-data", requiresAuth(), (req, res) => {
+  try {
+    res.json({
+      message: "This is protected data",
+      user: req.oidc.user });
+  } catch (error) {
+    console.error("Error viewing protected data:", error);
+  }
+  });
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

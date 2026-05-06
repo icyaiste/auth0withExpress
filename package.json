@@ -1,0 +1,21 @@
+{
+  "name": "auth0withexpress",
+  "version": "1.0.0",
+  "description": "**Firebase Authentication + Secure API — practical assignment**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icyaiste/auth0withExpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/icyaiste/auth0withExpress/issues"
+  },
+  "homepage": "https://github.com/icyaiste/auth0withExpress#readme"
+}

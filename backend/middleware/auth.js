@@ -5,11 +5,12 @@ dotenv.config();
 
 // Auth0 configuration
 const config = {
-  authRequired: false,
-  auth0Logout: true,
+  authRequired: false,      // Allow public routes
+  auth0Logout: true,        // Use Auth0 logout endpoint
   secret: process.env.SECRET,
-  baseURL: process.env.BASE_URL,
-  clientID: process.env.CLIENT_ID,
-  issuerBaseURL: process.env.ISSUER,
+  baseURL: process.env.BASEURL,
+  clientID: process.env.CLIENTID,
+  issuerBaseURL: process.env.ISSUER
 };
+
 export const authMiddleware = auth(config);
