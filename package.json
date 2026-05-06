@@ -1,7 +1,7 @@
 {
   "name": "auth0withexpress",
   "version": "1.0.0",
-  "description": "**Firebase Authentication + Secure API — practical assignment**",
+  "description": "**Auth0 with Express**",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
